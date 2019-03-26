@@ -31,3 +31,82 @@
     transform: rotate(360deg);
   }
 }
+
+body {
+  margin:0;
+}
+
+header {
+  padding: 15px 30px;
+  border-bottom:1px solid #999999 ;
+  background-color: #CCCCCC;
+}
+
+header > h1 {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  cursor: pointer;
+}
+
+header div {
+  display: inline-block;
+  float: right;
+  width:80%;
+}
+
+header div input{
+  width: 80%;
+  font-size: 16px;
+  padding: 7px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  border: 1px solid #999999
+}
+
+li {
+  list-style: none;
+}
+
+.videoList {
+  width: 30%;
+  float: right;
+  padding: 10px;
+  margin: 0;
+  text-align: center;
+}
+
+.videoList ul {
+  padding: 0;
+  margin: 0;
+}
+
+.videoList li img{
+  width: 50%;
+}
+
+.videoList li h5{
+  text-align: center;
+}
+ul div {
+  padding: 10px 10px 30px;
+  border-bottom: 1px solid #cccccc;
+  cursor: pointer;
+}
+
+ul div:hover {
+  box-shadow: 0 0 5px #CCCCCC;
+}
+
+.videoDetail {
+  width: 65%;
+  display: inline;
+  float: left;
+  padding: 30px 0 0 30px;
+  text-align: center;
+}
+
+.videoDetail p {
+  text-align: left;
+}
