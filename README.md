@@ -1,68 +1,104 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to `MyTube`, an open-source YouTube replica that aims to give
+developers a chance to understand the workings of a video-sharing
+platform. Here you will find setup instructions, necessary scripts,
+environment setup information, and a brief overview of the app’s flow.
 
-## Available Scripts
+# Requirements
 
-In the project directory, you can run:
+- Node.js (v14+)
 
-### `npm start`
+- MongoDB
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Git
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+# Setting Up
 
-### `npm test`
+1.  **Clone the Repository**:
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+        git clone https://github.com/your_username/mytube.git
 
-### `npm run build`
+2.  **Navigate to Project Directory**:
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+        cd mytube
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+3.  **Install Dependencies**: Using npm:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+        npm install
 
-### `npm run eject`
+    Or using yarn:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+        yarn
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4.  **Start Local Server**:
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+        npm start
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+    Or with yarn:
 
-## Learn More
+        yarn start
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Environment Variables
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+For the application to work correctly, make sure you set up the
+following environment variables:
 
-### Code Splitting
+    DB_URL=mongodb://localhost:27017/mytube   # Your MongoDB URL
+    PORT=3000                                 # The port on which the server runs
+    SECRET_KEY=your_secret_key                # Secret key for JWT tokens
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+Store these in a `.env` file in the root of your project.
 
-### Analyzing the Bundle Size
+# App Flow
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+1.  **User Registration & Authentication**:
 
-### Making a Progressive Web App
+    - Users can register and log in using email and password.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+    - Authentication is handled using JWT tokens.
 
-### Advanced Configuration
+2.  **Video Uploads**:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+    - Registered users can upload videos.
 
-### Deployment
+    - Videos are stored using an external storage solution (e.g., AWS
+      S3).
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+3.  **Video Playback**:
 
-### `npm run build` fails to minify
+    - Videos can be played back in a dedicated video player.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+    - Users can also like, dislike, and comment on videos.
+
+4.  **Search & Recommendations**:
+
+    - Users can search for videos using keywords.
+
+    - The home page provides video recommendations based on watch
+      history.
+
+# Scripts
+
+- **Start the Development Server**:
+
+      npm run dev
+
+- **Run Production Build**:
+
+      npm run build
+
+- **Linting**: Check for linting errors with:
+
+      npm run lint
+
+# Contributing
+
+We welcome contributions from everyone. If you’ve got any suggestions,
+ideas, or bugs to report, please [open a new
+issue](https://github.com/your_username/mytube/issues/new).
+
+# License
+
+This project is licensed under the MIT License. For more details, see
+the [LICENSE](LICENSE) file in the project root.
+
+Happy coding! 🚀
